@@ -244,7 +244,7 @@ function Printersearch() {
   if (showErrorPage) {
     // This is the error page after 15 seconds of spinner
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200">
+      <div className="flex flex-col items-center justify-center bg-gray-100 min-h-screen">
         <div className="mb-6 flex justify-center">
           <Image
             src="/error.png"  // Make sure error.png exists in your public folder
@@ -271,7 +271,7 @@ function Printersearch() {
           {/* <div className="absolute inset-0 bg-[#007DBA] opacity-60"></div> */}
 
           <div className="relative z-10 text-white 2xl:ml-[-392px] xl:ml-[-85px] mt-[-74px]">
-            <h1 className="text-[54px] mb-4 xl:ml-[-145px] 2xl:ml-[-63px]">
+            <h1 className="text-[54px] mb-4 xl:ml-[-73px] 2xl:ml-[-63px]">
               Complete setup using Professionals Help
             </h1>
             <div className="border-t border-white w-[1100px] mx-auto mb-8 mt-[-19px] xl:ml-[-4px]"></div>
@@ -306,14 +306,14 @@ function Printersearch() {
         </section>
 
         <div className="flex flex-col items-center xl:ml-[-468px] 2xl:ml-[-688px]">
-          <h1 className="mt-[30px] 2xl:ml-[-592px] xl:ml-[-592px] text-[16px]">
+          {/* <h1 className="mt-[30px] 2xl:ml-[-592px] xl:ml-[-592px] text-[16px]">
             Also available on:
-          </h1>
-          <img
+          </h1> */}
+          {/* <img
             src="https://www.freepnglogos.com/uploads/app-store-logo-png/google-play-and-apple-app-store-logos-22.png"
             className="h-[50px] mt-4 ml-[-406px]"
             alt="Available on"
-          />
+          /> */}
         </div>
       </div>
 
