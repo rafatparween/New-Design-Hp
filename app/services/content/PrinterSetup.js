@@ -106,11 +106,14 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation'; 
 
 export default function PrinterSetup() {
+  const handleRedirect = () => {
+    window.location.href = "https://www.printersmartassistant.com/";
+  };
   const router = useRouter(); 
 
-  const handleSetupClick = () => {
-    router.push('../services/Pages'); // Ensure the path is correct
-  };
+  // const handleSetupClick = () => {
+  //   router.push('../services/Pages'); // Ensure the path is correct
+  // };
 
   return (
     <div className="flex flex-col items-center py-14 space-y-14 mt-[-33px] bg-[#007DBD] mt-[7px]">
@@ -134,7 +137,7 @@ export default function PrinterSetup() {
           </p>
           <button 
             className="bg-[#007DBD] text-white py-3 px-8 rounded text-lg font-medium hover:bg-blue-300 transition duration-200"
-            onClick={handleSetupClick}
+            onClick={handleRedirect}
           >
             <p className='text-white'>
               Printer Setup
