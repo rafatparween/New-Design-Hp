@@ -3,7 +3,7 @@ import Image from "next/image";
 const supportOptions = [
   {
     id: 1,
-    src: "/download.png", // Replace with actual image path
+    src: "/download.png",
     alt: "Download Drivers",
     text: "Download Drivers >",
   },
@@ -34,11 +34,11 @@ const SupportOptions = () => {
       <hr className="border-gray-300 mb-6" />
 
       {/* Icons Container */}
-      <div className="flex items-center justify-between bg-white px-10">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-white px-4 md:px-10 space-y-4 md:space-y-0">
         {supportOptions.map((option, index) => (
-          <div key={option.id} className="flex flex-col items-center w-1/4 relative">
+          <div key={option.id} className="flex flex-col items-center w-full md:w-1/4 relative">
             {/* Icon */}
-            <div className="relative w-[137px] h-[137px]">
+            <div className="relative w-[100px] h-[100px] md:w-[137px] md:h-[137px]">
               <Image
                 src={option.src}
                 alt={option.alt}
@@ -54,7 +54,7 @@ const SupportOptions = () => {
 
             {/* Vertical Divider (except last item) */}
             {index < supportOptions.length - 1 && (
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 h-[132px] border-l border-gray-300"></div>
+              <div className="hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 h-[132px] border-l border-gray-300"></div>
             )}
           </div>
         ))}

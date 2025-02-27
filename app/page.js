@@ -6,8 +6,6 @@ import Technicians from "./components/Technicians";
 import Assistance from "./components/Assistance";
 import Avoid from "./components/Avoid";
 import Helppage from "./components/Helppage";
-
-import { Help } from "@mui/icons-material";
 import FooterSection from "./components/FooterSection";
 import PrinterSetup from "./services/content/PrinterSetup";
 import PrinterS from "./components/PrinterS";
@@ -17,6 +15,7 @@ import Navbar from "./components/Navbar";
 import JivoChat from "./Jivochat";
 import SupportOptions from "./components/SupportOptions";
 import Digonode from "./components/Digonode";
+import Wrapper from "./components/Wrapper";
 
 
 
@@ -35,11 +34,11 @@ function Home() {
       <SupportPage/>
       <Digonode/>
       
-      <Technicians/>
-      <Assistance/>
+      {/* <Technicians/> */}
+      {/* <Assistance/> */}
      
       <Avoid/>
-      <Helppage/> 
+      <Wrapper/>
       <FooterSection/>
       <JivoChat/>
 

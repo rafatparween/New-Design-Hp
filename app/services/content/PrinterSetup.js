@@ -107,7 +107,7 @@ import { useRouter } from 'next/navigation';
 
 export default function PrinterSetup() {
   const handleRedirect = () => {
-    window.location.href = "https://www.printersmartassistant.com/";
+    window.open("https://www.printersmartassistant.com/", "_blank");
   };
   const router = useRouter(); 
 
