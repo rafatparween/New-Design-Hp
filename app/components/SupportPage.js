@@ -59,11 +59,11 @@ export default function SupportPage() {
                         <div className="flex-1 text-center md:text-left space-y-6">
                             <h2 className="text-xl md:text-2xl font-bold">Identify Your Printer</h2>
                             <p className="text-base md:text-lg">
-                                Having trouble identifying your printer model? Look for the serial number or product name printed on the back or underside of your printer. 
+                                Having trouble identifying your printer model? Look for the serial number or product name printed on the back or underside of your printer.
                                 This information helps you find the right manuals, drivers, and troubleshooting solutions for your specific model.
                             </p>
                             <p className="text-base md:text-lg">
-                                If you're unable to locate the details, refer to the documentation or packaging that came with your printer. Alternatively, reach out to our support 
+                                If you're unable to locate the details, refer to the documentation or packaging that came with your printer. Alternatively, reach out to our support
                                 team for assistance.
                             </p>
                         </div>
@@ -75,8 +75,16 @@ export default function SupportPage() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center px-4">
-                <Image src="/issueone.jpg" alt="Printer Example" width={1050} height={200} className="mt-10 md:mt-[40px] mb-14 md:mb-[114px] rounded-lg" />
+            <div className="flex justify-center w-full">
+                <div className="w-[85%]">
+                    <Image
+                        src="/issueone.jpg"
+                        alt="Printer Example"
+                        width={1050}
+                        height={200}
+                        className="w-full h-auto mt-10 md:mt-[40px] mb-14 md:mb-[114px] rounded-lg"
+                    />
+                </div>
             </div>
         </>
     );

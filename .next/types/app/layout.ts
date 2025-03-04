@@ -1,4 +1,4 @@
-// File: /home/navgurukul-pune/new_desinhp/app/layout.js
+// File: /home/navgurukul-pune/printer_solution_online/app/layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
