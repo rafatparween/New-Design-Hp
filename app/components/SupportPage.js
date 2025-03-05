@@ -76,16 +76,16 @@ export default function SupportPage() {
                 </div>
             </div>
             <div className="flex justify-center w-full">
-                <div className="w-[85%]">
-                    <Image
-                        src="/issueone.jpg"
-                        alt="Printer Example"
-                        width={1050}
-                        height={200}
-                        className="w-full h-auto mt-10 md:mt-[40px] mb-14 md:mb-[114px] rounded-lg"
-                    />
-                </div>
-            </div>
+  <div className="w-[85%] max-w-[1280px] mx-auto">
+    <Image
+      src="/issueone.jpg"
+      alt="Printer Example"
+      width={1050}
+      height={200}
+      className="w-full h-auto mt-10 md:mt-[40px] mb-14 md:mb-[114px] rounded-lg"
+    />
+  </div>
+</div>
         </>
     );
 }

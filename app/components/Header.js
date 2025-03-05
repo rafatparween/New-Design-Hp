@@ -1,68 +1,3 @@
-// "use client";
-// import { useState } from "react";
-// import { FiMenu } from "react-icons/fi";
-// import Link from "next/link";
-
-// export default function Header() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <div className="flex flex-col items-center">
-//       {/* Navigation Bar */}
-//       <nav className="bg-[#1C8DCEED] text-white w-full">
-//         <div className="max-w-7xl mx-auto px-4">
-//           <div className="flex justify-between items-center h-12 xl:ml-[-82px] 2xl:ml-[265px]">
-//             {/* Mobile Menu Button */}
-//             <button
-//               className="md:hidden text-white text-2xl"
-//               onClick={() => setIsOpen(!isOpen)}
-//             >
-//               <FiMenu />
-//             </button>
-
-//             {/* Desktop Navigation */}
-//             <div className="hidden md:flex justify-center items-center space-x-16 2xl:ml-[-285px] xl:ml-[67px]">
-//               <Link href="/">Printer Offline</Link>
-//               <Link href="/">Printer Setup</Link>
-//               <Link href="/">Scanner Setup</Link>
-//               <Link href="/">Support Home</Link>
-//               <Link href="/">Ink Cartridges Issue</Link>
-//               <Link href="/">Diagnostics</Link>
-//               <Link href="/">Business Support</Link>
-//             </div>
-//           </div>
-//         </div>
-//       </nav>
-
-//       {/* Mobile Sidebar */}
-//       <div
-//         className={`fixed top-0 left-0 h-full w-64 bg-[#1C8DCEED] text-white transform ${
-//           isOpen ? "translate-x-0" : "-translate-x-full"
-//         } transition-transform duration-300 ease-in-out md:hidden`}
-//       >
-//         <button
-//           className="absolute top-4 right-4 text-2xl"
-//           onClick={() => setIsOpen(false)}
-//         >
-//           ✕
-//         </button>
-//         <div className="flex flex-col space-y-5 mt-16 pl-6">
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Printer Offline</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Printer Setup</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Scanner Setup</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Support Home</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Ink Cartridges Issue</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Diagnostics</Link>
-//           <Link href="../customsoftware/Pages" className="block" onClick={() => setIsOpen(false)}>Business Support</Link>
-//         </div>
-//       </div>
-
-//       <div className="my-4 w-full mt-[3px]"></div>
-//     </div>
-//   );
-// }
-
-
 "use client";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
@@ -75,8 +10,8 @@ export default function Header() {
     <div className="flex flex-col items-center w-full">
       {/* Navigation Bar */}
       <nav className="bg-[#1C8DCEED] text-white w-full">
-        <div className="max-w-[90.33%] mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-[90.33%] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[1280px] mx-auto flex justify-between items-center h-16">
             {/* Mobile Menu Button */}
             <button
               className="md:hidden text-white text-3xl"
@@ -87,13 +22,23 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex justify-between items-center w-full">
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Printer Offline</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Printer Setup</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Scanner Setup</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Support Home</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Ink Cartridges Issue</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Diagnostics</Link>
-              <Link href="/" className="hover:text-gray-300 text-lg font-medium">Business Support</Link>
+              {[
+                "Printer Offline",
+                "Printer Setup",
+                "Scanner Setup",
+                "Support Home",
+                "Ink Cartridges Issue",
+                "Diagnostics",
+                "Business Support",
+              ].map((item, index) => (
+                <Link
+                  key={index}
+                  href="/"
+                  className="hover:text-gray-300 text-sm sm:text-base md:text-lg font-medium whitespace-nowrap px-3"
+                >
+                  {item}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -112,13 +57,24 @@ export default function Header() {
           ✕
         </button>
         <div className="flex flex-col space-y-6 mt-20 pl-8">
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Printer Offline</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Printer Setup</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Scanner Setup</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Support Home</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Ink Cartridges Issue</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Diagnostics</Link>
-          <Link href="/" className="block text-lg font-medium" onClick={() => setIsOpen(false)}>Business Support</Link>
+          {[
+            "Printer Offline",
+            "Printer Setup",
+            "Scanner Setup",
+            "Support Home",
+            "Ink Cartridges Issue",
+            "Diagnostics",
+            "Business Support",
+          ].map((item, index) => (
+            <Link
+              key={index}
+              href="/"
+              className="block text-lg font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              {item}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
